@@ -41,6 +41,7 @@ tw-sidebar tw-icon.redo{
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">if (!window.GlobalFunc || !window.CryptFunc) {
 	window.GlobalFunc = {};
 	window.CryptFunc = {};
@@ -128,6 +129,7 @@ window.onload = function() {
 		}
 	}
 }
+
 
 
 
@@ -648,9 +650,10 @@ As expected, the mineshaft lay behind me, and the sparkling sea crashed to shore
 As I neared the exit of the crypt, the moon cast a wan glow on the walls around me. Shafts of dusts traced straight lines toward the entrace as if they were guiding the way. Out and perhaps up?
 
 Was that moon real? Perhaps not. Just the facade of a simulated world prodded to my personal preferences. However, should I ever gather the resources to make it there one day, Celestia would probably try her best to make it a convincing world to explore. (set: $moonUnlock to 1)
-](else:)[
+](else-if: $currentLocation is &quot;fields&quot;)[
 I travelled through the endless field to make it to the shoreline. The journey was long and arduous, but soon enough, I found the sea to one side of me, and an abandoned mineshaft to the other bored into the side of a cliff.
-]
+](else-if: $currentLocation is &quot;acrossSea&quot;)[
+Drenched in water, I crawled back onto the shoreline. In front of me loomed the mineshaft, and to the right of me, the path I took to get from the mainland. I shook myself briefly, and I became surprisingly dry.]
 {
 (set: $cryptBeen to 1)
 (set: $currentLocation to &quot;crypt&quot;)
@@ -729,6 +732,8 @@ Moonlight glittered on the waves, a dull glow that threatened to put me in a sen
 [[Swim back to shore-&gt;Crazy Crypt]]&lt;br&gt;
 [[Swim to the island-&gt;Isolated Island]]&lt;br&gt;
 [[Dive underwater-&gt;Merpony Reef]]
+
+(set: $currentLocation to &quot;acrossSea&quot;)
 }</tw-passagedata><tw-passagedata pid="22" name="Beginning" tags="" position="219,241" size="100,100">I felt the tendrils of calm seep into my muscles and I knew that relaxing them would mean I&#39;d never get to use them again.
 
 Next to me, the occasional plink of my blood hit the concrete as my body sat sprawled out on the wall of some shitty alleyway. Waves of newspapers surrounded me and soaked up the grime on the floor that I slowly sank further into, desperate to die with at least a bit of dignity, rather than covered in the filth of inner city post-apocalyptic New York.
